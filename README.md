@@ -6,7 +6,7 @@ The stack of used technologies is specified on the 1st line of this file :)
 
 Briefly the functions that are in this project:
 
--  Add/Delete/Edit/Edit ToDo record.
+-  Add/Delete/Edit ToDo record.
 -  Saving to localStorage.
 -  Pagination.
 
