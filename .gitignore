@@ -16,7 +16,6 @@ dist-ssr
 .vscode/*
 !.vscode/extensions.json
 .prettierrc
-.package-lock.json
 .idea
 .DS_Store
 *.suo
@@ -24,3 +23,4 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+package-lock.json
