@@ -8,7 +8,7 @@ interface TodoFormProps {
 }
 
 export const TodoForm = ({ create }: TodoFormProps) => {
-   const [todo, setTodo] = useState<Todo>({
+   const [task, setTask] = useState<Todo>({
       id: 0,
       title: '',
       status: false,
@@ -21,23 +21,28 @@ export const TodoForm = ({ create }: TodoFormProps) => {
    }.${date.getUTCFullYear()}`;
 
    const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
-      setTodo({ ...todo, title: event.target.value });
+      setTask({ ...task, title: event.target.value });
    };
 
    const addNewTodo = (event: MouseEvent<HTMLButtonElement>) => {
       event.preventDefault();
       const newTodo = {
-         ...todo,
+         ...task,
          id: Math.round(Math.random() * 1000),
          createdDate: createdDate,
       };
-      create(newTodo);
-      setTodo({ id: 0, title: '', status: false, createdDate: '' });
+      if (task.title.trim() !== '') create(newTodo);
+      setTask({ id: 0, title: '', status: false, createdDate: '' });
    };
 
    return (
       <form className="flex justify-start items-center">
-         <Input type="text" value={todo.title} onChange={handleInputChange} />
+         <Input
+            type="text"
+            value={task.title}
+            onChange={handleInputChange}
+            placeholder="type something..."
+         />
          <Button onClick={addNewTodo}> Add task </Button>
       </form>
    );
