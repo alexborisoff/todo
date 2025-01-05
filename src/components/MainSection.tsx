@@ -11,7 +11,7 @@ export const MainSection = () => {
    useEffect(() => {
       localStorage.setItem('todos', JSON.stringify(todos));
    }, [todos]);
-
+   
    const createTodo = (newTodo: Todo) => {
       setTodos([...todos, newTodo]);
    };
