@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { UsePagination } from '../data/local/models/UsePagination';
+import { UsePagination } from '../data/local/models/usePagination';
 
 const usePagination: UsePagination = ({ contentPerPage, count }) => {
     const [page, setPage] = useState<number>(1);
