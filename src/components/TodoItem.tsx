@@ -3,7 +3,7 @@ import { Button } from './UI/Button/Button';
 
 interface TodoItemProps {
    todo: Todo;
-   remove: (todo: Todo) => Todo[];
+   remove: (todo: Todo) => void;
 }
 
 export const TodoItem = ({ todo, remove }: TodoItemProps) => {

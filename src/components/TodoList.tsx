@@ -5,7 +5,7 @@ import usePagination from '../hooks/usePagination';
 
 interface TodoListProps {
    todos: Todo[];
-   remove: (todo: Todo) => Todo[];
+   remove: (todo: Todo) => void;
 }
 
 export const TodoList = ({ todos, remove }: TodoListProps) => {
