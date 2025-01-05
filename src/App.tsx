@@ -1,9 +1,14 @@
-import { MainSection } from './components/MainSection';
+import { AboutApp } from './pages/AboutApp';
+import { Todos } from './pages/Todos';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 export const App = () => {
    return (
-      <>
-         <MainSection />
-      </>
+      <BrowserRouter>
+         <Routes>
+            <Route path="/" element={<Todos />} />
+            <Route path="/about_us" element={<AboutApp />} />
+         </Routes>
+      </BrowserRouter>
    );
 };
