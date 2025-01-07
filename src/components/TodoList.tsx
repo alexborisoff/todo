@@ -21,7 +21,9 @@ export const TodoList = ({ todos, remove }: TodoListProps) => {
             {todos.length ? (
                todos
                   .slice(firstContentIndex, lastContentIndex)
-                  .map(todo => <TodoItem key={todo.id} todo={todo} remove={remove} />)
+                  .map((todo, index) => (
+                     <TodoItem key={todo.id} taskNumber={index + 1} todo={todo} remove={remove} />
+                  ))
             ) : (
                <h1 className="font-bilbo text-center text-5xl text-"> it's all done </h1>
             )}

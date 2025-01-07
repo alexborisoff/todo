@@ -5,17 +5,18 @@ import { Button } from './UI/Button/Button';
 
 interface TodoItemProps {
    todo: Todo;
+   taskNumber: number;
    remove: (todo: Todo) => void;
 }
 
-export const TodoItem = ({ todo, remove }: TodoItemProps) => {
+export const TodoItem = ({ todo, taskNumber, remove }: TodoItemProps) => {
    const [isDone, setIsDone] = useState<boolean>(false);
 
    return (
       <div className="py-1 px-2 flex flex-col justify-between border-solid border-blue-400 rounded border-2 ">
          <div className="flex flex-row justify-between items-center ">
             <p className={`font-bilbo text-xl ${isDone ? 'line-through text-gray-300' : ''}`}>
-               {todo.id} {todo.title}
+               {taskNumber} {todo.title}
             </p>
             <div className="flex gap-2 items-center">
                <input
