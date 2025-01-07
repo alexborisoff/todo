@@ -1,4 +1,4 @@
-import { AboutApp } from './pages/AboutApp';
+import { About } from './pages/About';
 import { Todos } from './pages/Todos';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
@@ -7,7 +7,7 @@ export const App = () => {
       <BrowserRouter>
          <Routes>
             <Route path="/" element={<Todos />} />
-            <Route path="/about_us" element={<AboutApp />} />
+            <Route path="/about_us" element={<About />} />
          </Routes>
       </BrowserRouter>
    );
