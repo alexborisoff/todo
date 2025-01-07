@@ -4,7 +4,7 @@ import night from '../../../assets/images/night_icon.svg';
 
 export const Switcher = () => {
    return (
-      <div className="flex  items-center gap-1">
+      <div className="flex items-center gap-1">
          <img className="h-7 w-7" src={day} alt="Sun icon" />
          <label className="switcher">
             <input type="checkbox" />
