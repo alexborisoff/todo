@@ -17,6 +17,9 @@ export default {
             '95vw': '95vw',
             'full-85': '85%',
          },
+         borderRadius: {
+            '50per': '50%',
+         },
       },
       screens: {
          mobile: '320px',
