@@ -29,9 +29,9 @@ export const TodoList = ({ todos, remove }: TodoListProps) => {
             )}
          </div>
 
-         <div className="text-2xl text-blue-400">
+         <div className="dark:text-white text-2xl text-blue-400">
             <p className="text-center">
-               <span className="text-blue-600">{page}</span> / {totalPages}
+               <span className="dark:text-gray-500 text-blue-600">{page}</span> / {totalPages}
             </p>
             <div className="flex gap-2 ">
                <div

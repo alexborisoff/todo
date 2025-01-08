@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Todo } from '../data/local/models/Todo';
 import { Button } from './UI/Button/Button';
 
-
 interface TodoItemProps {
    todo: Todo;
    taskNumber: number;
@@ -22,10 +21,12 @@ export const TodoItem = ({ todo, taskNumber, remove }: TodoItemProps) => {
                <input
                   type="checkbox"
                   onChange={() => setIsDone(!isDone)}
-                  className="h-5 w-5 border-blue-400 border-none rounded-50per bg-white-600 cursor-pointer transition-colors duration-300 hover:bg-gray-200"
+                  className="h-5 w-5 border-blue-400 bg-white-600 cursor-pointer transition-colors duration-300 hover:bg-gray-500"
                />
                <Button onClick={() => alert('test')}> Edit </Button>
-               <Button onClick={() => remove(todo)}> Delete </Button>
+               <Button  onClick={() => remove(todo)}>
+                  Delete
+               </Button>
             </div>
          </div>
          <p className="font-ubuntu text-end text-gray-500/90 text-sm">
