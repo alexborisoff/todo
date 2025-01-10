@@ -1,17 +1,21 @@
 import { useEffect, useState } from 'react';
 import { Todo } from '../data/local/models/Todo';
-import { todoData } from '../data/remote/models/TodoResponseModel';
 import { TodoForm } from '../components/TodoForm';
 import { TodoList } from '../components/TodoList';
 import { Menu } from '../components/UI/Menu/Menu';
 
 export const Todos = () => {
-   const [todos, setTodos] = useState<Todo[]>(todoData);
+   const [todos, setTodos] = useState<Todo[]>([]);
    const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
 
    useEffect(() => {
+      const storedTodos = JSON.parse(localStorage.getItem('todos')!);
+      if (storedTodos) setTodos(storedTodos);
+   }, []);
+
+   useEffect(() => {
       localStorage.setItem('todos', JSON.stringify(todos));
-   }, [todos]);
+   }, [todos, isDarkMode]);
 
    const changeThemeMode = () => {
       setIsDarkMode(!isDarkMode);
