@@ -27,7 +27,7 @@ export const TodoItem = ({ todo, taskNumber, remove }: TodoItemProps) => {
                <Button onClick={() => remove(todo)}> Delete </Button>
             </div>
          </div>
-         <p className="font-ubuntu text-end text-gray-500/90 text-sm">
+         <p className="font-ubuntu text-gray-500/90 text-end  text-sm">
             created: {todo.createdDate}
          </p>
       </div>
