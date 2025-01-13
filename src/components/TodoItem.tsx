@@ -24,7 +24,7 @@ export const TodoItem = ({ todo, taskNumber, remove }: TodoItemProps) => {
                   className="h-5 w-5 border-blue-400 bg-white-600 cursor-pointer transition-colors duration-300 hover:bg-gray-500"
                />
                <Button onClick={() => alert('test')}> Edit </Button>
-               <Button onClick={() => remove(todo)}>Delete</Button>
+               <Button onClick={() => remove(todo)}> Delete </Button>
             </div>
          </div>
          <p className="font-ubuntu text-end text-gray-500/90 text-sm">
