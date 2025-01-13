@@ -12,7 +12,7 @@ export const Switcher = ({ dark }: SwitcherProps) => {
          <img className="dark:invert h-7 w-7 rounded-full" src={day} alt="Sun icon" />
          <label className="switcher">
             <input type="checkbox" onChange={() => dark()} />
-            <span className="slider"></span>
+            <span className="slider"> </span>
          </label>
          <img className="dark:invert h-7 w-7" src={night} alt="Night icon" />
       </div>
