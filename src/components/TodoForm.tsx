@@ -2,6 +2,7 @@ import { useState, MouseEvent, ChangeEvent } from 'react';
 import { Todo } from '../data/local/models/Todo';
 import { Input } from './UI/Input/Input';
 import { Button } from './UI/Button/Button';
+import { createdDate } from '../utils/dates';
 
 interface TodoFormProps {
    create: (todo: Todo) => void;
@@ -14,11 +15,6 @@ export const TodoForm = ({ create }: TodoFormProps) => {
       status: false,
       createdDate: '',
    });
-
-   const date = new Date();
-   const createdDate: string = `${date.getDate()}.${
-      date.getUTCMonth() + 1
-   }.${date.getUTCFullYear()}`;
 
    const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
       setTask({ ...task, title: event.target.value });
