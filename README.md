@@ -14,3 +14,4 @@ Briefly the functions that are in this project:
 Planned to be implemented in the near future:
 -  Fix Dark Mode.
 -  Internationalization.
+-  Responsive Layout.
