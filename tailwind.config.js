@@ -9,6 +9,7 @@ export default {
             ubuntu: ['Ubuntu'],
          },
          height: {
+            '8vh': '8vh',
             '70vh': '70vh',
          },
          width: {
@@ -26,14 +27,8 @@ export default {
          mobile: '320px',
          // => @media (min-width: 320px) { ... }
 
-         mobile_horizontal: '480px',
-         // => @media (min-width: 480px) { ... }
-
-         tablet: '640px',
-         // => @media (min-width: 640px) { ... }
-
-         laptop: '1024px',
-         // => @media (min-width: 1024px) { ... }
+         tablet: '900px',
+         // => @media (min-width: 900) { ... }
 
          desktop: '1280px',
          // => @media (min-width: 1280px) { ... }
