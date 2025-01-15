@@ -4,9 +4,12 @@ import { TodoForm } from '../components/TodoForm';
 import { TodoList } from '../components/TodoList';
 import { Menu } from '../components/UI/Menu/Menu';
 
-export const Todos = () => {
+interface TodosProps {
+   changeTheme: () => void;
+}
+
+export const Todos = ({changeTheme}:TodosProps) => {
    const [todos, setTodos] = useState<Todo[]>([]);
-   const [theme, setTheme] = useState<boolean>(false);
 
    useEffect(() => {
       const storedTodos = JSON.parse(localStorage.getItem('todos')!);
@@ -16,11 +19,6 @@ export const Todos = () => {
    useEffect(() => {
       localStorage.setItem('todos', JSON.stringify(todos));
    }, [todos]);
-
-   const changeTheme = () => {
-      setTheme(!theme);
-      document.body.classList.toggle('dark');
-   };
 
    const createTodo = (newTodo: Todo) => {
       setTodos([...todos, newTodo]);

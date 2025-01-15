@@ -1,12 +1,10 @@
-import { useState } from 'react';
 import { Menu } from '../components/UI/Menu/Menu';
 
-export const About = () => {
-   const [theme, setTheme] = useState<boolean>(false);
-   const changeTheme = () => {
-      setTheme(!theme);
-      document.body.classList.toggle('dark');
-   };
+interface AboutProps {
+   changeTheme: () => void;
+}
+
+export const About = ({changeTheme}:AboutProps) => {
    return (
       <section className="h-70vh w-85vw flex justify-center items-center flex-row border-blue-300 border-2 shadow-xl shadow-blue-300">
          <Menu changeThemeMode={changeTheme} />
