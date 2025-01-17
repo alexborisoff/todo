@@ -1,7 +1,7 @@
 import { TodoItem } from './TodoItem';
-import { ArrowBigLeft, ArrowBigRight } from 'lucide-react';
 import { Todo } from '../data/local/models/Todo';
 import usePagination from '../hooks/usePagination';
+import { Pagination } from './Pagination';
 
 interface TodoListProps {
    todos: Todo[];
@@ -9,11 +9,11 @@ interface TodoListProps {
 }
 
 export const TodoList = ({ todos, remove }: TodoListProps) => {
-   const { firstContentIndex, lastContentIndex, nextPage, prevPage, page, totalPages } =
-      usePagination({
-         contentPerPage: 5,
-         count: todos.length,
-      });
+   // , nextPage, prevPage, page, totalPages
+   const { firstContentIndex, lastContentIndex } = usePagination({
+      contentPerPage: 5,
+      count: todos.length,
+   });
 
    return (
       <div className="w-full flex justify-start items-center gap-1.5 flex-col">
@@ -28,27 +28,7 @@ export const TodoList = ({ todos, remove }: TodoListProps) => {
                <h1 className="font-bilbo text-center text-5xl text-"> it's all done </h1>
             )}
          </div>
-
-         <div className="dark:text-white text-2xl text-blue-400">
-            <p className="text-center">
-               <span className="dark:text-gray-500 text-blue-600">{page}</span> / {totalPages}
-            </p>
-            <div className="flex gap-2 ">
-               <div
-                  className="transition-all duration-500 cursor-pointer hover:scale-110 hover:text-gray-500 active:text-black"
-                  onClick={prevPage}
-               >
-                  <ArrowBigLeft />
-               </div>
-
-               <div
-                  className="transition-all duration-500 cursor-pointer hover:scale-110 hover:text-gray-500 active:text-black"
-                  onClick={nextPage}
-               >
-                  <ArrowBigRight />
-               </div>
-            </div>
-         </div>
+         <Pagination todos={todos} />
       </div>
    );
 };
