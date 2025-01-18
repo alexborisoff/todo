@@ -14,8 +14,8 @@ export const App = () => {
    return (
       <BrowserRouter>
          <Routes>
-            <Route path="/" element={<Todos changeTheme={changeTheme}/>} />
-            <Route path="/about_us" element={<About changeTheme={changeTheme}/>} />
+            <Route path="/" element={<Todos changeTheme={changeTheme} />} />
+            <Route path="/about_us" element={<About changeTheme={changeTheme} />} />
          </Routes>
       </BrowserRouter>
    );
