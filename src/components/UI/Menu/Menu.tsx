@@ -16,7 +16,7 @@ export const Menu = ({ changeThemeMode }: MenuProps) => {
    const { t, i18n } = useTranslation();
    return (
       <div className="h-full w-30vw py-5 flex flex-col justify-between items-center border-r-2">
-         <div>
+         <div className="flex gap-2 text-xl">
             {Object.keys(languages).map(language => (
                <button
                   type="submit"
