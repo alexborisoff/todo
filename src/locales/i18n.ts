@@ -14,7 +14,8 @@ i18next
                todos: 'TODOS',
                edit: 'Edit',
                delete: 'Delete',
-               rights: 'All rights reserved.'
+               rights: 'All rights reserved.',
+               done: 'All tasks completed',
             },
          },
          ru: {
@@ -22,7 +23,8 @@ i18next
                todos: 'ЗАДАЧИ',
                edit: 'Правка',
                delete: 'Удалить',
-               rights: 'Все права защищены.'
+               rights: 'Все права защищены.',
+               done: 'Все делишки выполнены',
             },
          },
       },

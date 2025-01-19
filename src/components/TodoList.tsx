@@ -2,6 +2,7 @@ import { TodoItem } from './TodoItem';
 import { Todo } from '../data/local/models/Todo';
 import usePagination from '../hooks/usePagination';
 import { Pagination } from './Pagination';
+import { useTranslation } from 'react-i18next';
 
 interface TodoListProps {
    todos: Todo[];
@@ -9,11 +10,12 @@ interface TodoListProps {
 }
 
 export const TodoList = ({ todos, remove }: TodoListProps) => {
-   // , nextPage, prevPage, page, totalPages
    const { firstContentIndex, lastContentIndex } = usePagination({
       contentPerPage: 5,
       count: todos.length,
    });
+
+   const {t} = useTranslation();
 
    return (
       <div className="w-full flex justify-start items-center gap-1.5 flex-col">
@@ -25,7 +27,7 @@ export const TodoList = ({ todos, remove }: TodoListProps) => {
                      <TodoItem key={todo.id} taskNumber={index + 1} todo={todo} remove={remove} />
                   ))
             ) : (
-               <h1 className="font-bilbo text-center text-5xl text-"> it's all done </h1>
+               <h1 className="font-bilbo text-center text-5xl text-"> {t('done')} </h1>
             )}
          </div>
          <Pagination todos={todos} />
