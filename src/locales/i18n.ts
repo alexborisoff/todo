@@ -14,13 +14,15 @@ i18next
                todos: 'TODOS',
                edit: 'Edit',
                delete: 'Delete',
+               rights: 'All rights reserved.'
             },
          },
          ru: {
             translation: {
                todos: 'ЗАДАЧИ',
-               edit: 'Редактировать',
+               edit: 'Правка',
                delete: 'Удалить',
+               rights: 'Все права защищены.'
             },
          },
       },
