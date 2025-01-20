@@ -15,7 +15,11 @@ export const TodoItem = ({ todo, taskNumber, remove, complete }: TodoItemProps) 
    return (
       <div className="h-10vh py-1 px-2 flex flex-col justify-between border-solid border-blue-400 rounded border-2 ">
          <div className="flex flex-row justify-between items-center ">
-            <p className={`font-bilbo text-xl ${todo.status ? 'line-through text-gray-300' : ''}`}>
+            <p
+               className={`font-bilbo text-xl ${
+                  todo.status ? 'transition-all duration-700 line-through text-gray-300' : ''
+               }`}
+            >
                {taskNumber} {todo.title}
             </p>
             <div className="flex gap-2 items-center">
