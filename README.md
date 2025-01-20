@@ -12,6 +12,8 @@ Briefly the functions that are in this project:
 -  Dark Mode.
 
 Planned to be implemented in the near future:
+
 -  Fix Dark Mode.
 -  Internationalization.
 -  Responsive Layout.
+   <code> Testing </code>
