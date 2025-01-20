@@ -13,7 +13,7 @@ Briefly the functions that are in this project:
 
 Planned to be implemented in the near future:
 
--  Fix Dark Mode.
--  Internationalization.
--  Responsive Layout.
-   <code> Testing </code>
+<code> - Fix Dark Mode.</code></br>
+<code> - Internationalization.</code></br>
+<code> - Responsive Layout.</code></br>
+<code> - Testing. </code>
