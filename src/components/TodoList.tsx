@@ -7,15 +7,16 @@ import { useTranslation } from 'react-i18next';
 interface TodoListProps {
    todos: Todo[];
    remove: (todo: Todo) => void;
+   complete: (todo: Todo) => void;
 }
 
-export const TodoList = ({ todos, remove }: TodoListProps) => {
+export const TodoList = ({ todos, remove, complete }: TodoListProps) => {
    const { firstContentIndex, lastContentIndex } = usePagination({
       contentPerPage: 5,
       count: todos.length,
    });
 
-   const {t} = useTranslation();
+   const { t } = useTranslation();
 
    return (
       <div className="w-full flex justify-start items-center gap-1.5 flex-col">
@@ -24,7 +25,7 @@ export const TodoList = ({ todos, remove }: TodoListProps) => {
                todos
                   .slice(firstContentIndex, lastContentIndex)
                   .map((todo, index) => (
-                     <TodoItem key={todo.id} taskNumber={index + 1} todo={todo} remove={remove} />
+                     <TodoItem key={todo.id} taskNumber={index + 1} todo={todo} remove={remove} complete={complete}/>
                   ))
             ) : (
                <h1 className="font-bilbo text-center text-5xl text-"> {t('done')} </h1>
