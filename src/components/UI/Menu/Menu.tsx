@@ -4,8 +4,8 @@ import { currentYear } from '../../../utils/dates';
 import { useTranslation } from 'react-i18next';
 
 const languages = {
-   en: { nativeName: 'English' },
-   ru: { nativeName: 'Russian' },
+   en: { nativeName: 'En' },
+   ru: { nativeName: 'Ru' },
 };
 
 interface MenuProps {
@@ -19,6 +19,7 @@ export const Menu = ({ changeThemeMode }: MenuProps) => {
          <div className="flex gap-2 text-xl">
             {Object.keys(languages).map(language => (
                <button
+                  className="disabled:text-blue-400 transition-colors duration-300"
                   type="submit"
                   key={language}
                   onClick={() => i18n.changeLanguage(language)}

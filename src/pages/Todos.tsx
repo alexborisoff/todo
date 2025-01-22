@@ -6,10 +6,11 @@ import { Menu } from '../components/UI/Menu/Menu';
 import { useTranslation } from 'react-i18next';
 
 interface TodosProps {
+   theme: boolean;
    changeTheme: () => void;
 }
 
-export const Todos = ({ changeTheme }: TodosProps) => {
+export const Todos = ({ theme, changeTheme }: TodosProps) => {
    const [todos, setTodos] = useState<Todo[]>([]);
 
    useEffect(() => {
@@ -19,7 +20,8 @@ export const Todos = ({ changeTheme }: TodosProps) => {
 
    useEffect(() => {
       localStorage.setItem('todos', JSON.stringify(todos));
-   }, [todos]);
+      localStorage.setItem('theme', JSON.stringify(theme));
+   }, [todos, theme]);
 
    const { t } = useTranslation();
 
