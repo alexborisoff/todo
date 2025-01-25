@@ -7,6 +7,11 @@
    src: url('./assets/fonts/BilboSwashCapsRegular.ttf');
 }
 
+@font-face {
+   font-family: 'Caveat';
+   src: url('./assets/fonts/Caveat.ttf');
+}
+
 * {
    margin: 0;
    padding: 0;
@@ -14,7 +19,7 @@
 }
 
 body {
-   font-family: 'Roboto';
+   font-family: 'Caveat';
    font-size: 16px;
 }
 

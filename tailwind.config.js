@@ -7,6 +7,7 @@ export default {
          fontFamily: {
             bilbo: ['Bilbo'],
             ubuntu: ['Ubuntu'],
+            caveat: ['Caveat'],
          },
          height: {
             '10vh': '10vh',
