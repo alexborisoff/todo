@@ -28,7 +28,7 @@ export const TodoList = ({ todos, remove, complete }: TodoListProps) => {
                      <TodoItem key={todo.id} taskNumber={index + 1} todo={todo} remove={remove} complete={complete}/>
                   ))
             ) : (
-               <h1 className="font-bilbo text-center text-5xl text-"> {t('done')} </h1>
+               <h1 className="text-center text-5xl text-"> {t('done')} </h1>
             )}
          </div>
          <Pagination todos={todos} />
